@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block tittle %}
+Criação
+{% endblock %}
+
+{% block subtitulo %}
+Listar criação
+{% endblock %}
+
+{% block conteudo %}
+    <table border="1">
+        <tr>
+            <th>Raca</th>
+            <th>Data de entrada</th>
+        </tr>
+        {% for criacoes in lista_criacoes %}
+            <tr>
+                <td>{{ criacoes.raca }}</td>
+                <td>{{ criacoes.data_entrada }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
+
+{% block rodape %}
+Rodapé da pagina
+{% endblock %}

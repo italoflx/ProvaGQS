@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block tittle %}
+Coleta
+{% endblock %}
+
+{% block subtitulo %}
+Listar coleta
+{% endblock %}
+
+{% block conteudo %}
+    <form method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Cadastrar" id="submit_button">
+    </form>
+{% endblock %}
+
+{% block rodape %}
+Rodapé da pagina
+{% endblock %}

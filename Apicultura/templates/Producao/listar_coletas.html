@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block tittle %}
+Criação
+{% endblock %}
+
+{% block subtitulo %}
+Listar coletas
+{% endblock %}
+
+{% block conteudo %}
+    <table border="1">
+        <tr>
+            <th>Raca</th>
+            <th>Data</th>
+            <th>Quantidade</th>
+        </tr>
+        {% for coleta in lista_coletas %}
+            <tr>
+                <td>{{ coleta.criacao.raca }}</td>
+                <td>{{ coleta.data_entrada }}</td>
+                <td>{{ coleta.quantidade }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}
+
+{% block rodape %}
+Rodapé da pagina
+{% endblock %}
